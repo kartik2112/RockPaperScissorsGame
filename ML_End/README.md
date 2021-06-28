@@ -12,4 +12,4 @@ Download these datasets to `datasets` folder:
 
 ## Articles
 
-* 
+* https://www.kaggle.com/parulpandey/overview-of-popular-image-augmentation-packages#3.-Data-Augmentation-using-imgaug
