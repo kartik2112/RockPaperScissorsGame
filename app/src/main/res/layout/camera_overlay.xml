@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textview_output"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:text="--"
+        android:textColor="#FFFFFF"
+        android:background="#424242"
+        android:layout_above="@id/camera_preview"
+        android:alpha="0.8" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/flashToggle"
+        app:backgroundTint="#9aeeeeee"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview_output"
+        android:layout_alignEnd="@+id/textview_output"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        app:srcCompat="@mipmap/flash"/>
+
+    <LinearLayout
+        android:id="@+id/modeSelector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10sp"
+        android:layout_marginLeft="10sp"
+        android:weightSum="2"
+        android:layout_above="@id/button_capture">
+        <Button
+            android:id="@+id/signModeButton"
+            android:text="SIGN"
+            android:background="#00ffffff"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/selectedModeBtnFG"
+            android:shadowColor="@color/selectedModeBtnBG"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="15"
+            android:layout_centerHorizontal="true"
+            android:paddingStart="20sp"
+            android:paddingEnd="20sp"
+            android:onClick="switchRecognitionMode"/>
+        <Button
+            android:id="@+id/gestureModeButton"
+            android:text="GESTURE"
+            android:background="#00ffffff"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/normalModeBtnFG"
+            android:shadowColor="@color/normalModeBtnBG"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="5"
+            android:layout_centerHorizontal="true"
+            android:paddingStart="20sp"
+            android:paddingEnd="20sp"
+            android:onClick="switchRecognitionMode"/>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/button_capture"
+        android:text="@string/capture"
+        android:textSize="16sp"
+        android:background="#d50ba8ef"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="0sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginBottom="10sp"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingStart="20sp"
+        android:paddingEnd="20sp"/>
+
+    <pl.droidsonroids.gif.GifTextView
+        android:id="@+id/loaderGif"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/silatra_logo"
+        android:visibility="gone"
+        android:translationZ="101dp"/>
+    <View
+        android:id="@+id/loaderBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8e000000"
+        android:visibility="gone"
+        android:translationZ="2dp"
+        />
+    <TextView
+        android:id="@+id/imageSize_TextView"
+        android:layout_below="@id/textview_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Size: (Bytes)"
+        android:textSize="20sp"
+        android:textColor="#b4006aff"
+        android:shadowColor="#b3ffffff"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"/>
+
+    <TextView
+        android:id="@+id/fps_TextView"
+        android:layout_below="@id/textview_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X fps"
+        android:textSize="20sp"
+        android:textColor="#b426ff00"
+        android:shadowColor="#b3ffffff"
+        android:layout_marginLeft="140dp"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"/>
+
+    <TextView
+        android:id="@+id/RTT_TextView"
+        android:layout_below="@id/textview_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RTT: (ms)"
+        android:textSize="20sp"
+        android:textColor="#b4ff0004"
+        android:shadowColor="#b3ffffff"
+        android:layout_marginLeft="220dp"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"/>
+
+</RelativeLayout>
