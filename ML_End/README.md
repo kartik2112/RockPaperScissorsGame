@@ -8,7 +8,9 @@ Download these datasets to `datasets` folder:
 
 ## Datasets
 
-* [Rock-Paper-Scissors Images](https://www.kaggle.com/drgfreeman/rockpaperscissors)
+* [Rock-Paper-Scissors Images | Kaggle](https://www.kaggle.com/drgfreeman/rockpaperscissors)
+
+* [CGI Rock Paper Scissors Images | Kaggle](https://www.kaggle.com/sanikamal/rock-paper-scissors-dataset)
 
 ## Articles
 
